@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--驼峰标识开启-->
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+    <!--类型别名-->
+    <typeAliases>
+        <package name="com.fuy.bean"/>
+    </typeAliases>
+    <!--注册分页插件-->
+    <!-- com.github.pagehelper为PageHelper类所在包名 -->
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageInterceptor"></plugin>
+        <!-- 使用下面的方式配置参数，后面会有所有的参数介绍 -->
+        <!-- 分页参数合理化 -->
+<!--        <property name="reasonable" value="true" />-->
+    </plugins>
+</configuration>
